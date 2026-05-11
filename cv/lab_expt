@@ -1,0 +1,126 @@
+pip install opencv-python
+-----------------------------------------------
+# 1 and 12 Program
+
+import cv2
+import urllib.request
+import numpy as np
+from google.colab.patches import cv2_imshow
+url = "https://static0.srcdn.com/wordpress/wp-content/uploads/2020/09/Iron-Man-featured-image.jpg"
+img = cv2.imdecode(np.frombuffer(urllib.request.urlopen(url).read(), np.uint8), 1)
+cv2_imshow(img)
+----------------------------
+# 2 and 3 Program
+
+import cv2,urllib.request,numpy as np
+from google.colab.patches import cv2_imshow
+
+u="https://static0.srcdn.com/wordpress/wp-content/uploads/2020/09/Iron-Man-featured-image.jpg"
+img=cv2.imdecode(np.frombuffer(urllib.request.urlopen(u).read(),np.uint8),1)
+
+g=cv2.cvtColor(img,6)
+_,t=cv2.threshold(g,120,255,0)
+c,_=cv2.findContours(t,1,2)
+
+cv2.drawContours(img,c,-1,(0,255,0),2)
+cv2.rectangle(img,(50,50),(200,200),(0,255,0),3)
+cv2.circle(img,(300,300),50,(255,0,0),3)
+cv2_imshow(img)
+-------------------------------------------------------------
+# 4 and 5 Program
+
+import cv2,urllib.request,numpy as np
+from google.colab.patches import cv2_imshow
+
+u="https://static0.srcdn.com/wordpress/wp-content/uploads/2020/09/Iron-Man-featured-image.jpg"
+img=cv2.imdecode(np.frombuffer(urllib.request.urlopen(u).read(),np.uint8),1)
+
+g=cv2.cvtColor(img,6)
+b=cv2.GaussianBlur(g,(5,5),0)
+
+s=cv2.Sobel(b,cv2.CV_64F,1,1)
+l=cv2.Laplacian(b,cv2.CV_64F)
+c=cv2.Canny(b,100,200)
+
+cv2_imshow(c)
+---------------------
+# 6,7,11 Program
+
+!pip install ultralytics -q
+
+import cv2,numpy as np,urllib.request as u
+from ultralytics import YOLO
+from google.colab.patches import cv2_imshow
+
+img=cv2.imdecode(np.frombuffer(u.urlopen("https://ultralytics.com/images/bus.jpg").read(),np.uint8),1)
+
+k,_=cv2.ORB_create().detectAndCompute(cv2.cvtColor(img,6),None)
+cv2_imshow(cv2.drawKeypoints(img,k,None))
+
+l=cv2.imdecode(np.frombuffer(u.urlopen("https://raw.githubusercontent.com/opencv/opencv/master/samples/data/aloeL.jpg").read(),np.uint8),0)
+r=cv2.imdecode(np.frombuffer(u.urlopen("https://raw.githubusercontent.com/opencv/opencv/master/samples/data/aloeR.jpg").read(),np.uint8),0)
+cv2_imshow(cv2.StereoBM_create(16,15).compute(l,r))
+
+cv2_imshow(YOLO("yolov8n-pose.pt")(img)[0].plot())
+---------------------------
+# 8 Program
+
+import cv2,urllib.request,numpy as np
+from google.colab.patches import cv2_imshow
+
+u="https://static0.srcdn.com/wordpress/wp-content/uploads/2020/09/Iron-Man-featured-image.jpg"
+img=cv2.imdecode(np.frombuffer(urllib.request.urlopen(u).read(),np.uint8),1)
+
+tracker=cv2.TrackerCSRT_create()
+tracker.init(img,(100,100,300,300))
+
+ok,b=tracker.update(img)
+
+if ok:
+    x,y,w,h=[int(i) for i in b]
+    cv2.rectangle(img,(x,y),(x+w,y+h),(0,255,0),3)
+
+cv2.putText(img,"Tracking",(50,50),0,1,(255,0,0),2)
+
+cv2_imshow(img)
+--------------------------------------------------------------------
+# 9 Program
+
+import cv2,numpy as np,urllib.request as u
+from google.colab.patches import cv2_imshow
+
+url="https://i.pinimg.com/1200x/a9/cb/f1/a9cbf16e2b763b1830000676a0c3b601.jpg"
+img=cv2.imdecode(np.frombuffer(u.urlopen(url).read(),np.uint8),1)
+
+m=np.zeros(img.shape[:2],np.uint8)
+bg=np.zeros((1,65),np.float64)
+fg=np.zeros((1,65),np.float64)
+
+h,w=img.shape[:2]
+cv2.grabCut(img,m,(5,5,w-10,h-10),bg,fg,5,0)
+
+out=img*np.where((m==2)|(m==0),0,1).astype("uint8")[:,:,None]
+
+cv2_imshow(out)
+-------------------------------------------------------------------
+# 10 Program
+
+import cv2,urllib.request,numpy as np
+from google.colab.patches import cv2_imshow
+
+u="https://raw.githubusercontent.com/opencv/opencv/master/doc/acircles_pattern.png"
+i=cv2.imdecode(np.frombuffer(urllib.request.urlopen(u).read(),np.uint8),1)
+g=cv2.cvtColor(i,cv2.COLOR_BGR2GRAY)
+
+p=(4,11)
+s=cv2.SimpleBlobDetector_Params()
+s.filterByArea=True; s.minArea=20; s.maxArea=50000
+s.filterByColor=True; s.blobColor=0
+d=cv2.SimpleBlobDetector_create(s)
+
+ok,c=cv2.findCirclesGrid(g,p,cv2.CALIB_CB_ASYMMETRIC_GRID|cv2.CALIB_CB_CLUSTERING,d,cv2.CirclesGridFinderParameters())
+print("Detected =",ok)
+
+if ok: cv2.drawChessboardCorners(i,p,c,ok)
+cv2_imshow(i)
+-----------------------------------------------------------------------
