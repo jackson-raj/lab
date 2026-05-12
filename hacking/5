@@ -1,0 +1,41 @@
+Aim
+To perform a WHOIS lookup for a target domain and analyze the registrar details, domain owner information,
+and expiry date.
+Introduction
+WHOIS is a protocol used to retrieve registration information about domain names and IP addresses. It
+provides details such as registrar information, domain creation date, expiry date, nameservers, and
+organization details.
+Cybersecurity professionals use WHOIS lookup for domain investigation, reconnaissance, and security
+analysis.
+Procedure
+Step 1: Install WHOIS Tool
+Open Kali Linux terminal and install the WHOIS package:
+sudo apt install whois -y
+Step 2: Verify WHOIS Installation
+Check whether WHOIS is installed:
+whois --version
+Step 3: Perform WHOIS Lookup
+Run the WHOIS command for the target domain:
+whois www.grace.edu.in
+Step 4: Analyze the Information
+Observe:
+• Registrar details
+• Domain owner information
+• Creation date
+• Expiry date
+• Name server details
+Implementation
+Command Used
+whois www.grace.edu.in
+Explanation
+• whois → WHOIS lookup command
+• www.grace.edu.in → Target domain name
+Output
+Domain Name: grace.edu.in
+Registrar: ERNET India
+Organization: GRACE COLLEGE OF ENGINEERING
+Creation Date: 2024-10-30
+Registry Expiry Date: 2034-10-30
+Name Server: ns1.dns-parking.com
+Result
+Thus, the WHOIS lookup was performed successfully and domain registration details were analyzed
