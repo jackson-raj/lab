@@ -1,0 +1,27 @@
+Aim
+To install and configure the Metasploitable vulnerable machine using Vagrant and verify communication with
+Kali Linux.
+Introduction
+Metasploitable is a deliberately vulnerable Linux virtual machine used for penetration testing practice. It is
+commonly used with Kali Linux to learn vulnerability scanning and exploitation techniques.
+Procedure
+Step 1: Create Working Directory
+mkdir metasploitable-lab
+cd metasploitable-lab
+Step 2: Initialize Metasploitable Box
+vagrant init rapid7/metasploitable3-ub1404
+Step 3: Start Metasploitable VM
+vagrant up
+Step 4: Access Metasploitable
+vagrant ssh
+Step 5: Verify Network Communication
+From Kali Linux terminal, ping the Metasploitable machine:
+ping 192.168.56.101
+Step 6: Analyze Connectivity
+Observe successful ICMP reply packets.
+Output
+64 bytes from 192.168.56.101
+Host reachable
+Result
+Thus, the Metasploitable vulnerable machine was installed successfully and communication with Kali Linux
+was verified
