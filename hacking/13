@@ -1,0 +1,68 @@
+Aim
+To perform vulnerability scanning on a target system using Nessus Essentials and analyze detected
+vulnerabilities based on severity levels.
+Introduction
+Nessus Essentials is a vulnerability assessment tool used to identify security weaknesses in systems,
+networks, and web applications. It scans target machines and detects vulnerabilities such as outdated
+software, open ports, weak configurations, and security risks.
+Nessus categorizes vulnerabilities into:
+• Critical
+• High
+• Medium
+• Low
+• Informational
+It is widely used in cybersecurity and penetration testing for security auditing and risk assessment.
+Procedure
+Step 1: Download Nessus Essentials
+1. Open browser and visit the Nessus official website.
+2. Download Nessus Essentials for Windows.
+Step 2: Install Nessus
+1. Run the installer.
+2. Complete the installation process.
+Step 3: Open Nessus Interface
+Open browser and access:
+https://localhost:8834
+Step 4: Register Nessus
+1. Create/login Tenable account.
+2. Obtain activation code.
+3. Enter the activation key in Nessus setup.
+Step 5: Configure Nessus
+1. Wait for plugin download and initialization.
+2. Open Nessus dashboard.
+Step 6: Create New Scan
+1. Click New Scan.
+2. Select Basic Network Scan.
+Step 7: Configure Target
+Enter:
+• Scan name
+• Target IP address or domain
+Example:
+www.grace.edu.in
+Step 8: Launch Scan
+Click Launch to begin vulnerability scanning.
+Step 9: Analyze Results
+Observe:
+• Open ports
+• Vulnerabilities
+• Severity levels
+• Service information
+Implementation
+Target Domain
+www.grace.edu.in
+Vulnerability Categories
+• Critical
+• High
+• Medium
+• Low
+• Informational
+Output
+Open Ports Detected
+Service Information
+Medium Severity Vulnerabilities
+Low Severity Vulnerabilities
+Analysis
+Nessus successfully scanned the target system and identified vulnerabilities with different severity levels
+useful for security assessment.
+Result
+Thus, vulnerability scanning using Nessus Essentials was performed successfully and detected vulnerabilities
+were analyzed.
