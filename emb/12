@@ -1,0 +1,18 @@
+void setup() {
+
+  Serial.begin(9600);
+
+  int a = 10;
+  int b = 5;
+
+  int add = a + b;
+  int sub = a - b;
+
+  Serial.print("Addition = ");
+  Serial.println(add);
+
+  Serial.print("Subtraction = ");
+  Serial.println(sub);
+}
+
+void loop() {}
