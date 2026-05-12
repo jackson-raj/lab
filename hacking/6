@@ -1,0 +1,36 @@
+Aim
+To trace the route to a remote host using traceroute and analyze the response time between routers.
+Introduction
+Traceroute is a network diagnostic tool used to identify the path taken by packets from the source system to a
+destination host. It displays each hop (router) along the network path and measures the response time
+between systems.
+Traceroute helps network administrators analyze routing paths, troubleshoot connectivity issues, and
+measure network delays.
+Procedure
+Step 1: Install traceroute
+Open Kali Linux terminal and install traceroute:
+sudo apt install traceroute -y
+Step 2: Verify Installation
+Check whether traceroute is installed:
+traceroute --version
+Step 3: Trace Route to Remote Host
+Run the traceroute command:
+traceroute google.com
+Step 4: Analyze the Output
+Observe:
+• Number of hops
+• Router IP addresses
+• Response time between routers
+Implementation
+Command Used
+traceroute google.com
+Explanation
+• traceroute → Network route tracing tool
+• google.com → Target remote host
+Output
+1 192.168.1.1
+2 10.10.0.1
+3 142.250.183.14
+Result
+Thus, the route to the remote host was traced successfully using traceroute and the network hops were
+analyzed
