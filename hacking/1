@@ -1,0 +1,27 @@
+tion
+Kali Linux is a Debian-based Linux distribution widely used for penetration testing and cybersecurity. Vagrant is
+used to automate virtual machine deployment, while VirtualBox provides virtualization support.
+This experiment demonstrates the setup of a Kali Linux virtual machine using Vagrant and VirtualBox.
+Procedure
+Step 1: Install VirtualBox
+1. Download and install VirtualBox on Windows.
+2. Complete the installation process.
+Step 2: Install Vagrant
+1. Download and install Vagrant.
+2. Verify installation:
+vagrant --version
+Step 3: Create Working Directory
+mkdir kali-lab
+cd kali-lab
+Step 4: Initialize Kali Linux Vagrant Box
+vagrant init kalilinux/rolling
+Step 5: Start Kali Linux VM
+vagrant up
+Step 6: Access Kali Linux
+vagrant ssh
+Step 7: Verify Kali Linux
+cat /etc/os-release
+Output
+Kali Linux virtual machine deployed successfully
+Result
+Thus, Kali Linux was installed successfully using Vagrant and VirtualBox
