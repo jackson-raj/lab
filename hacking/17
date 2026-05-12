@@ -1,0 +1,45 @@
+Aim
+To start the Metasploit database service in Kali Linux and launch Armitage for connecting with the Metasploit
+Framework.
+Introduction
+Metasploit Framework is a penetration testing tool used for vulnerability assessment and exploitation. It
+provides modules for scanning, exploiting, and post-exploitation activities.
+Armitage is a graphical user interface (GUI) for Metasploit that helps visualize targets, manage exploits, and
+control Meterpreter sessions easily.
+The Metasploit database service stores scan results, host information, and vulnerability data.
+Procedure
+Step 1: Start PostgreSQL Service
+Open Kali Linux terminal and start PostgreSQL database service:
+sudo systemctl start postgresql
+Step 2: Initialize Metasploit Database
+Run the following command:
+sudo msfdb init
+Step 3: Verify Database Status
+Check whether the database is connected:
+msfconsole
+Inside Metasploit console, type:
+db_status
+Step 4: Launch Armitage
+Run the following command:
+armitage
+Step 5: Connect Armitage to Metasploit
+1. Click Connect.
+2. Use default settings.
+3. Wait for Armitage to connect with Metasploit Framework.
+Implementation
+Commands Used
+sudo systemctl start postgresql
+sudo msfdb init
+msfconsole
+db_status
+armitage
+Output
+PostgreSQL service started
+Metasploit database connected
+Armitage connected successfully
+Analysis
+The Metasploit database service was initialized successfully and Armitage established connection with the
+Metasploit Framework for penetration testing operations.
+Result
+Thus, the Metasploit database service was started successfully and Armitage was connected with the
+Metasploit Framework.
