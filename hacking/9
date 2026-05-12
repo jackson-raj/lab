@@ -1,0 +1,51 @@
+Aim
+To extract metadata from files using ExifTool and identify information such as file type, file size, and
+modification details.
+Introduction
+Metadata is hidden information stored inside files that contains details such as file name, file type, creation
+date, author information, and software details.
+ExifTool is a command-line utility used to read and analyze metadata from documents, images, and
+multimedia files. Metadata extraction is useful in cybersecurity and digital forensics for identifying hidden
+information inside files.
+Procedure
+Step 1: Install ExifTool
+Open Kali Linux terminal and install ExifTool:
+sudo apt install libimage-exiftool-perl -y
+Step 2: Verify Installation
+Check whether ExifTool is installed successfully:
+exiftool -ver
+Step 3: Create Working Directory
+Create a directory for metadata analysis:
+mkdir metadata
+Move into the directory:
+cd metadata
+Step 4: Create Sample File
+Create a sample text file:
+echo "Hello World" > sample.txt
+Check the file:
+ls
+Step 5: Extract Metadata
+Run the following command:
+exiftool sample.txt
+Implementation
+Command Used
+exiftool sample.txt
+Explanation
+• exiftool → Metadata extraction tool
+• sample.txt → Target file
+Output
+File Name : sample.txt
+File Type : TXT
+File Size : 12 bytes
+MIME Type : text/plain
+Word Count : 2
+Analysis
+The extracted metadata contains:
+• File name
+• File type
+• File size
+• MIME type
+• Word count
+This information is useful in forensic investigation and file analysis.
+Result
+Thus, metadata was extracted successfully from the file using ExifTool.
