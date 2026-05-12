@@ -1,0 +1,54 @@
+Experiment 6: Patient Data Transfer System Between Patient and
+Hospital Using IoT
+Introduction
+IoT-based healthcare systems help hospitals monitor patient health conditions remotely. Sensors attached to the
+patient collect health data such as temperature, heartbeat, and oxygen level. The collected data is transferred to
+hospitals through the internet for continuous monitoring and emergency response.
+Objective
+The main objective of this system is:
+• To monitor patient health remotely
+• To transfer patient data to hospitals in real time
+• To reduce hospital visits
+• To provide quick medical response during emergencies
+Components Used
+• Arduino Uno / ESP32
+• Temperature Sensor
+• Pulse Sensor
+• Wi-Fi Module
+• Buzzer
+• Cloud Platform (ThingSpeak/Blynk)
+• Internet Connection
+Working Principle
+The sensors continuously monitor patient health conditions. The Arduino or ESP32 reads the sensor values and
+sends the data to the hospital server using Wi-Fi modules.
+Examples:
+• Temperature sensor measures body temperature.
+• Pulse sensor measures heart rate.
+• Cloud platform stores patient data.
+• Doctors can monitor patient health remotely.
+• Alerts are generated during abnormal conditions.
+Block Diagram
+Patient Sensors → Arduino/ESP32 → Wi-Fi Module → Hospital Server/Cloud
+ ↓
+ Alert System
+Features
+• Real-time patient monitoring
+• Wireless data transfer
+• Emergency alert system
+• Cloud-based health monitoring
+• Remote healthcare support
+Advantages
+• Reduces hospital workload
+• Saves time
+• Provides quick emergency response
+• Supports remote patient monitoring
+• Improves healthcare services
+Applications
+• Smart hospitals
+• Remote healthcare systems
+• Elderly patient monitoring
+• Emergency medical services
+• Home healthcare systems
+Conclusion
+Thus, the IoT-based patient data transfer system helps hospitals monitor patients remotely and improves
+healthcare management through real-time data communication and emergency support.
