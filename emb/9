@@ -1,0 +1,32 @@
+Aim
+To control home appliances using ESP32 and Blynk application.
+Requirements
+• ESP32
+• LED
+• 220Ω Resistor
+• Blynk App
+• WiFi Connection
+Procedure
+Step 1: Circuit Connection
+1. Open Wokwi/Tinkercad or use ESP32 hardware.
+2. Connect LED to GPIO pin of ESP32.
+3. Provide power supply to the circuit.
+Step 2: Blynk Setup
+1. Install Blynk IoT application.
+2. Create a new template.
+3. Select ESP32 and WiFi connection.
+4. Copy the Authentication Token.
+Step 3: Configure Datastream
+1. Create Virtual Pin V0.
+2. Add button widget in dashboard.
+3. Save and apply settings.
+Step 4: Arduino Programming
+1. Open Arduino IDE.
+2. Install ESP32 board package and Blynk library.
+3. Write and upload the program.
+Step 5: Execution
+1. Start simulation/run hardware.
+2. Control LED using Blynk app.
+3. Observe ON/OFF operation.
+Result
+Thus, the simple home automation system using ESP32 and Blynk was implemented successfully.
