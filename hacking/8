@@ -1,0 +1,56 @@
+Aim
+To perform an aggressive Nmap scan using the -A option and analyze operating system details, service
+versions, and traceroute information.
+Introduction
+Nmap aggressive scan is used to gather advanced information about a target system. The -A option enables:
+• Operating system detection
+• Service version detection
+• Script scanning
+• Traceroute
+This scan helps cybersecurity professionals identify detailed information about a target machine and possible
+vulnerabilities.
+Procedure
+Step 1: Install Nmap
+Open Kali Linux terminal and install Nmap:
+sudo apt install nmap -y
+Step 2: Verify Installation
+Check whether Nmap is installed successfully:
+nmap --version
+Step 3: Perform Aggressive Scan
+Run the following command:
+sudo nmap -A www.grace.edu.in
+Step 4: Analyze the Output
+Observe:
+• Open ports
+• Service versions
+• Operating system details
+• Traceroute information
+Implementation
+Command Used
+sudo nmap -A www.grace.edu.in
+Explanation
+• sudo → Runs command with administrator privileges
+• nmap → Starts Nmap tool
+• -A → Enables aggressive scan
+• www.grace.edu.in → Target website/domain
+Output
+PORT STATE SERVICE VERSION
+21/tcp open ftp
+80/tcp open http
+443/tcp open https
+3306/tcp open mysql
+Service Info: OS: Linux
+Analysis
+Port Service
+21 FTP
+80 HTTP
+443 HTTPS
+3306 MySQL
+The aggressive scan identified:
+• Open ports
+• Running services
+• Operating system details
+• Network route information
+Result
+Thus, the aggressive Nmap scan using the -A option was performed successfully and detailed information
+about the target system was identified.
