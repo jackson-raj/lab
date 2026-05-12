@@ -1,0 +1,29 @@
+Aim
+To discover vulnerable hosts in a network using Metasploit and Nmap integration.
+Introduction
+Metasploit Framework integrates with Nmap to perform host discovery, service detection, and vulnerability
+assessment. The scan results are stored in the Metasploit database for further exploitation and analysis.
+Procedure
+Step 1: Install PostgreSQL
+sudo apt install postgresql -y
+Step 2: Install Metasploit Framework
+sudo apt install metasploit-framework -y
+Step 3: Start PostgreSQL Service
+sudo systemctl start postgresql
+Step 4: Initialize Database
+sudo msfdb init
+Step 5: Open Metasploit Console
+msfconsole
+Step 6: Verify Database Connection
+db_status
+Step 7: Perform Nmap Scan
+db_nmap scanme.nmap.org
+Step 8: View Hosts and Services
+hosts
+services
+Output
+Hosts discovered
+Open ports detected
+Services identified
+Result
+Thus, vulnerable hosts were discovered successfully using Metasploit and Nmap integration.
