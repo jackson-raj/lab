@@ -1,0 +1,60 @@
+Experiment 1: Design the Smart City Model Using IoT Devices
+Aim
+To design and develop a smart city model using IoT devices for monitoring and controlling city services such as
+street lights, traffic systems, environmental monitoring, and waste management.
+Components Required
+• Arduino Uno / ESP32
+• Wi-Fi Module (ESP8266 if needed)
+• LED lights
+• LDR sensor
+• Ultrasonic sensor
+• DHT11/DHT22 sensor
+• Breadboard
+• Jumper wires
+• Buzzer
+• Power supply
+Theory
+A Smart City uses IoT technology to improve the quality of urban services. Sensors collect real-time data from
+different areas of the city and send the information to cloud platforms or monitoring systems. IoT helps in smart
+traffic control, automatic street lighting, pollution monitoring, waste management, and energy saving.
+Procedure
+Step 1: Circuit Setup
+1. Connect LEDs to Arduino pins for smart street light demonstration.
+2. Connect the LDR sensor to detect light intensity.
+3. Connect the DHT sensor for temperature monitoring.
+4. Connect the ultrasonic sensor for smart parking/waste monitoring.
+5. Provide power supply to the Arduino board.
+Step 2: Programming
+1. Open Arduino IDE.
+2. Write the program for reading sensor values.
+3. Program the LEDs to turn ON/OFF automatically based on sensor input.
+4. Upload the code to Arduino.
+Step 3: IoT Communication
+1. Connect the ESP32/ESP8266 to Wi-Fi.
+2. Send sensor data to a cloud platform such as ThingSpeak or Blynk.
+3. Monitor the data in real time.
+Step 4: Testing
+1. Test automatic street light operation using the LDR sensor.
+2. Check temperature values from the DHT sensor.
+3. Verify obstacle/distance detection using the ultrasonic sensor.
+4. Observe data updates on the cloud platform.
+Block Diagram
+Sensors → Arduino/ESP32 → Wi-Fi Module → Cloud Platform
+ ↓
+ Smart Devices
+ (LED, Buzzer, Display)
+Advantages
+• Reduces power consumption
+• Provides real-time monitoring
+• Improves city management
+• Supports automation
+• Reduces human effort
+Applications
+• Smart traffic system
+• Smart parking
+• Smart street lighting
+• Pollution monitoring
+• Smart waste management
+Result
+Thus, the smart city model using IoT devices was successfully designed and implemented for monitoring and
+automation purposes
