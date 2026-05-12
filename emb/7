@@ -1,0 +1,20 @@
+int ledPin = 2;
+char data;
+void setup() {
+ Serial.begin(115200);
+ pinMode(ledPin, OUTPUT);
+ Serial.println("Enter 1 for ON, 0 for OFF");
+}
+void loop() {
+ if (Serial.available()) {
+ data = Serial.read();
+ if (data == '1') {
+ digitalWrite(ledPin, HIGH);
+ Serial.println("LED ON");
+ }
+ else if (data == '0') {
+ digitalWrite(ledPin, LOW);
+ Serial.println("LED OFF");
+ }
+ }
+}
