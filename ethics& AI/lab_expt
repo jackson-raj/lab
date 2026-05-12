@@ -36,3 +36,23 @@ plt.show()
 print("No Bias Slope:", m1.coef_[0][0])
 print("With Bias Slope:", m2.coef_[0][0])
 print("With Bias Intercept:", m2.intercept_[0])
+-----------
+from sklearn import datasets
+from sklearn.linear_model import Perceptron
+from sklearn.model_selection import train_test_split
+
+iris = datasets.load_iris()
+
+X = iris.data[:100]
+y = iris.target[:100]
+
+X_train, X_test, y_train, y_test = train_test_split(
+    X, y, test_size=0.3)
+
+p1 = Perceptron(fit_intercept=False)
+p1.fit(X_train, y_train)
+
+p2 = Perceptron(fit_intercept=True)
+p2.fit(X_train, y_train)
+
+print("Done")
