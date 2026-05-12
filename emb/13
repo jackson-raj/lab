@@ -1,0 +1,27 @@
+Aim
+To set up a cloud platform for logging sensor data using IoT devices.
+Requirements
+• ESP32 / Arduino
+• WiFi Connection
+• Sensor Module
+• ThingSpeak/Blynk Cloud
+• Arduino IDE
+Procedure
+Step 1: Cloud Setup
+1. Create account in ThingSpeak/Blynk.
+2. Create a new channel/template.
+3. Generate API key/Auth token.
+Step 2: Circuit Connection
+1. Connect sensor to ESP32.
+2. Connect ESP32 to computer.
+Step 3: Arduino Programming
+1. Open Arduino IDE.
+2. Install required libraries.
+3. Enter WiFi credentials and API key.
+4. Upload the program.
+Step 4: Execution
+1. Connect ESP32 to WiFi.
+2. Send sensor data to cloud platform.
+3. Observe data in graph/dashboard.
+Result
+Thus, the cloud platform for logging IoT sensor data was configured successfully.
