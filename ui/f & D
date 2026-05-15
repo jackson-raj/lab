@@ -1,0 +1,33 @@
+<?php
+$conn=mysqli_connect("localhost","root","","studentdb");
+if($_POST)
+{
+$name=$_POST['name'];
+$dept=$_POST['dept'];
+$reg=$_POST['reg'];
+mysqli_query($conn,"insert into students(name,dept,regno)
+values('$name','$dept','$reg')");
+echo "Saved Successfully";
+}
+?>
+<form method="post">
+Name:
+<input type="text" name="name"><br><br>
+Dept:
+<input type="text" name="dept"><br><br>
+Reg No:
+<input type="text" name="reg"><br><br>
+<input type="submit" value="Save">
+</form>
+--------------------------------
+Database Code
+----------------------------------------
+CREATE DATABASE studentdb;
+USE studentdb;
+CREATE TABLE students(
+id INT AUTO_INCREMENT PRIMARY KEY,
+name VARCHAR(50),
+dept VARCHAR(50),
+regno VARCHAR(30)
+);
+----------------------
